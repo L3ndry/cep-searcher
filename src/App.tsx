@@ -19,7 +19,7 @@ function App() {
         setInputCep("")
         console.log(cepDatas)
     } catch(error){
-        alert("CEP inválido.")
+        console.log(error)
         setInputCep("")
     }    
   }
@@ -28,18 +28,21 @@ function App() {
   return (
     <div className='container'>
         <div className="container__text">
-            <p>Digite o CEP que deseja consultar</p>
-            <input type="text" value={inputCep} placeholder='Digite o CEP aqui' onChange={(e) => setInputCep(e.target.value)} />
-            <button onClick={(e) => {callCep(e)}}>Consultar CEP</button>
+            <h1>Buscar CEP</h1>
+            <form>
+                <label htmlFor="cepName">Digite um Cep:</label>
+                <input type="text" name='cepName' value={inputCep} required placeholder='Digite o CEP aqui' onChange={(e) => setInputCep(e.target.value)} />
+                <button onClick={(e) => {callCep(e)}}>Consultar CEP</button>
+            </form>
         </div>
 
         {Object.keys(cepDatas).length > 0 && (
             <div className="container__cep">
-                <p>{cepDatas.cep}</p>
-                <p>logradouro {cepDatas.logradouro}</p>
-                <p>bairro {cepDatas.bairro}</p>
+                <p>CEP: {cepDatas.cep}</p>
+                <p>Logradouro: {cepDatas.logradouro}</p>
+                <p>Bairro: {cepDatas.bairro}</p>
                 <div>
-                    <span>localidade {cepDatas.localidade}</span> - <span>uf {cepDatas.uf}</span>
+                    <span>Localidade: {cepDatas.localidade}</span> - <span>UF: {cepDatas.uf}</span>
                 </div>
             </div>
         )}

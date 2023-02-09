@@ -1,0 +1,6 @@
+@import "../../mixings";
+
+.container {
+    @include flexd (column);
+    
+}

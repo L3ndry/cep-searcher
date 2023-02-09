@@ -1,0 +1,30 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 5vw;
+  align-items: center;
+  width: 100vw;
+  height: 48vh;
+}
+.container .leftSide {
+  width: 20%;
+  height: 100%;
+  background-color: rgba(51, 23, 7, 0.8901960784);
+  padding: 30px;
+}
+.container .leftSide form {
+  display: flex;
+  flex-direction: column;
+}
+.container .imgArea {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 35%;
+  background-color: aqua;
+}
+.container .imgArea img {
+  width: 100%;
+}/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,34 @@
+@import "../../mixings";
+
+.container {
+    @include flexd (row);
+    justify-content: center;
+    gap: 5vw;
+    align-items: center;
+    width: 100vw;
+    height: 48vh;
+
+    .leftSide {
+        width: 20%;
+        height: 100%;
+        background-color: #331707e3;
+        padding: 30px;
+
+        form {
+            @include flexd (column);
+    
+        }
+    }
+
+    .imgArea {
+        @include flexd (row);
+        align-items: center;
+        justify-content: center;
+        width: 35%;
+        background-color: aqua;
+        
+        img {
+            width: 100%;
+        }
+    }
+}

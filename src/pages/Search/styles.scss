@@ -3,20 +3,37 @@
 .container {
     @include flexd (row);
     justify-content: center;
-    gap: 5vw;
+    // gap: 5vw;
     align-items: center;
     width: 100vw;
     height: 48vh;
 
     .leftSide {
+        @include flexd (column);
+        justify-content: space-around;
+        align-items: center;
         width: 20%;
-        height: 100%;
-        background-color: #331707e3;
+        height: 101%;
+        gap: 80px;
+        background-color: #9c7057e3;
         padding: 30px;
 
         form {
             @include flexd (column);
-    
+            align-items: center;
+            height: 50%;
+            justify-content: space-around;
+
+            a {
+                @include flexd (column);
+                justify-content: center;
+                align-items: center;
+                background-color: #ffffff;
+                color: #000000;
+                font-weight: bold;
+                width: 70%;
+                height: 35%
+            }
         }
     }
 

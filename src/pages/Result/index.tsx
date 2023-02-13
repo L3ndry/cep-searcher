@@ -1,4 +1,8 @@
-export default function Result() {
+import api from "../../services/api"
+
+export default function Result( { cepResponse }: any ) {
+
+
     return (
         <div className="container__cep">
             <p>CEP: {}</p>
